@@ -2,8 +2,11 @@ package assignment_2.conditionals;
 
 public class ConditionalStatement2 {
     public static void main (String args[]) {
-        int value = 100;
-        if(true) {
+        int value = 50;
+        int x = 40;
+        boolean b = value != x;
+
+        if(!b) {
             if(value == 100) {
                 System.out.println("You Win");
             }
@@ -11,7 +14,7 @@ public class ConditionalStatement2 {
             System.out.println("You Lose");
         }
 
-        //doSomething()
+        doSomething(b);
     }
 
 

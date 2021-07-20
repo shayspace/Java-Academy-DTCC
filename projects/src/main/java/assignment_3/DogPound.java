@@ -18,7 +18,7 @@ public class DogPound {
         myDog.setName("Fido");
 
         if(myDog.name != null ) {
-            System.out.println("Great the Dog's name is: " + myDog.name);
+            System.out.println("The Dog's name is: " + myDog.name);
         }
 
         // If we print the variable "x" what do you think the value will be?
@@ -26,13 +26,13 @@ public class DogPound {
         System.out.println(String.format("The value of variable x is %s", x));
 
         // If we change the value of the variable "x" will that affect myDog.name?
-        x = "Other Name";
+        x = "Meteor";
         System.out.println(String.format("The value of variable x is %s", x));
         System.out.println(String.format("The value of variable myDog.name is %s", myDog.name));
 
         String dogsSpeech = myDog.speak();
         if(dogsSpeech != null) {
-            System.out.println(String.format("The value of variable dogsSpeech is %s", dogsSpeech));
+            System.out.println(String.format("The value of variable dogsSpeech is: %s", dogsSpeech));
         }
 
     }
@@ -44,13 +44,16 @@ public class DogPound {
          */
         public int age;
         public String name;
+        public String speak;
 
         public Dog() {
             age = -1;
             name = null;
+            speak = null;
+
         }
 
-        public void setName(String n) throws Exception {
+        public String setName(String n) throws Exception {
             /*
                 Please finish this method, you want to set the private variable "name" of the
                 class Dog to the value of the parameter of the "setName" method.
@@ -60,7 +63,9 @@ public class DogPound {
                 <data type> <variable name> = <expression>
              */
 
-            throw new Exception("Please implement this function");
+        name = n;
+        return name;
+                       /*  throw new Exception("Please implement this function"); */
         }
 
         public String speak() {
@@ -69,7 +74,9 @@ public class DogPound {
                 when you ask them to.
              */
 
-            return null;
+            /* String mydogspeak = "I'm the top dog!"; */
+            speak = "I'm the top dog!";
+            return speak;
         }
     }
 }
